@@ -7,4 +7,4 @@ Pour garantir la cohérence des données et la synchronisation des opérations, 
 
 Collaborateurs : 
   -  El Mehdi el Moufid —> Conception et modélisation , Base de données , création cahier de charge
-  - Abderrahim Oumoussi / Soufiane Tiraoui —> Developpement : Back-End and Front-End
+  - Abderrahim Oumoussi / Mohamed Soufiane Tiraoui —> Developpement : Back-End and Front-End
