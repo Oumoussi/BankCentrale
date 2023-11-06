@@ -4,3 +4,7 @@ L'objectif est de concevoir une application distribuée pour gérer les comptes 
 Les agences bancaires,  sont dotées de clients dédiés à cette banque centrale. Cette application permet aux employés des agences d'effectuer diverses opérations bancaires, notamment des dépôts, des retraits et la consultation des soldes des comptes de leurs clients. De plus, cette application a la capacité de créer de nouveaux comptes bancaires pour les clients qui en font la demande.
 
 Pour garantir la cohérence des données et la synchronisation des opérations, toutes ces applications clientes utilisent un service à distance fourni par la banque centrale. Ce service à distance permet de transmettre les modifications apportées aux comptes bancaires à la fin de chaque journée de travail. Ainsi, les informations sur les comptes, les transactions et les soldes sont mises à jour de manière centralisée, ce qui garantit une gestion efficace des comptes bancaires de la banque centrale tout en permettant aux agences de servir leurs clients de manière autonome
+
+Collaborateurs : 
+  -  El Mehdi el Moufid —> Conception et modélisation , Base de données , création cahier de charge
+  - Abderrahim Oumoussi / Soufiane Tiraoui —> Developpement : Back-End and Front-End
