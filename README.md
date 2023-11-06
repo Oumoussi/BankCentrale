@@ -5,6 +5,8 @@ Les agences bancaires,  sont dotées de clients dédiés à cette banque central
 
 Pour garantir la cohérence des données et la synchronisation des opérations, toutes ces applications clientes utilisent un service à distance fourni par la banque centrale. Ce service à distance permet de transmettre les modifications apportées aux comptes bancaires à la fin de chaque journée de travail. Ainsi, les informations sur les comptes, les transactions et les soldes sont mises à jour de manière centralisée, ce qui garantit une gestion efficace des comptes bancaires de la banque centrale tout en permettant aux agences de servir leurs clients de manière autonome
 
+Technologies : Asp.Net, Angular, MongoDB
+
 Collaborateurs : 
   -  El Mehdi el Moufid —> Conception et modélisation , Base de données , création cahier de charge
   - Abderrahim Oumoussi / Mohamed Soufiane Tiraoui —> Developpement : Back-End and Front-End
