@@ -1,0 +1,43 @@
+<ng-container *ngIf="!isLoggedIn; else loggedIn">
+  <h2>Please log in to access this page !</h2>
+  <button routerLink="/login">Login</button>
+</ng-container>
+<ng-template #loggedIn>
+  <div class="login-container">
+    <h2>Create Transaction</h2>
+    <form [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" formControlName="amount" required>
+      </div>
+      <div class="form-group">
+        <label for="type">Type:</label>
+        <select formControlName="type">
+          <option *ngFor="let transactionType of getTransactionTypes()" [value]="transactionType.value">
+            {{ transactionType.label }}
+          </option>
+        </select>
+      </div>
+      <!-- <div class="form-group">
+      <label for="status">Status:</label>
+      <select formControlName="status">
+        <option *ngFor="let transactionStatus of getTransactionStatuses()" [value]="transactionStatus.value">
+          {{ transactionStatus.label }}
+        </option>
+      </select>
+    </div> -->
+      <div class="form-group">
+        <label for="sourceAccount">Source Account:</label>
+        <input type="text" id="sourceAccount" formControlName="sourceAccount">
+      </div>
+      <div class="form-group">
+        <label for="destinationAccount">Destination Account:</label>
+        <input type="text" id="destinationAccount" formControlName="destinationAccount" required>
+      </div>
+      <div class="error-message" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </div>
+      <button type="submit" [disabled]="transactionForm.invalid">Create Transaction</button>
+    </form>
+  </div>
+</ng-template>

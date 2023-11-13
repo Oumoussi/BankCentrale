@@ -1,0 +1,27 @@
+.account-list {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  font-weight: bold;
+  padding: 8px;
+}
+
+tbody td {
+  padding: 8px;
+}
+
+button {
+  padding: 4px 8px;
+}

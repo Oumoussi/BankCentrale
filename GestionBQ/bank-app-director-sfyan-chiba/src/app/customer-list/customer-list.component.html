@@ -1,0 +1,33 @@
+<div class="account-list">
+    <ng-container *ngIf="!isLoggedIn; else loggedIn">
+      <h2>Please log in to access this page !</h2>
+      <button routerLink="/login">Login</button>
+    </ng-container>
+    <ng-template #loggedIn>
+      <ng-container *ngIf="customers.length === 0; else customerList">
+        <h2>no customers found !</h2>
+      </ng-container>
+      <ng-template #customerList>
+        <table>
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let customer of customers">
+              <td>{{ customer.firstname }}</td>
+              <td>{{ customer.lastname }}</td>
+              <td>{{ customer.email }}</td>
+              <td>{{ customer.phoneNumber }}</td>
+              <td>{{ customer.address }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-template>
+    </ng-template>
+  </div>

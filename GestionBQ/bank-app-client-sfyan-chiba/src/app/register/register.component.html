@@ -1,0 +1,35 @@
+<div class="login-container">
+  <h2>Insert Informations</h2>
+  <div class="form-group">
+    <label>Firstname:</label>
+    <input [(ngModel)]="customer.firstname" type="text">
+  </div>
+  <div class="form-group">
+    <label>Lastname:</label>
+    <input [(ngModel)]="customer.lastname" type="text">
+  </div>
+  <div class="form-group">
+    <label>Email:</label>
+    <input [(ngModel)]="customer.email" type="email">
+  </div>
+  <div class="form-group">
+    <label>Phone Number:</label>
+    <input [(ngModel)]="customer.phoneNumber" type="tel">
+  </div>
+  <div class="form-group">
+    <label>Address:</label>
+    <input [(ngModel)]="customer.address" type="text">
+  </div>
+  <div class="form-group">
+    <label>Password:</label>
+    <input [(ngModel)]="customer.passwordHash" type="text">
+  </div>
+  <div class="form-group">
+    <label>Agency:</label>
+    <select [(ngModel)]="customer.agency">
+      <option value="64654f4e373a17165adafa84">fes</option>
+      <option value="6465555a0276105f50734a30">marakech</option>
+    </select>
+  </div>
+  <button (click)="createCustomer()">Create</button>
+</div>

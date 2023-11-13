@@ -1,0 +1,35 @@
+<div class="account-list">
+    <ng-container *ngIf="!isLoggedIn; else loggedIn">
+      <h2>Please log in to access this page !</h2>
+      <button routerLink="/login">Login</button>
+    </ng-container>
+    <ng-template #loggedIn>
+      <ng-container *ngIf="transactions.length === 0; else transactionList">
+        <h2>no transactions found !</h2>
+      </ng-container>
+      <ng-template #transactionList>
+        <table>
+          <thead>
+            <tr>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Source RIB</th>
+              <th>Destination RIB</th>
+              <th>Type</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let transaction of transactions; let i = index">
+              <td>{{ transaction.amount }}</td>
+              <td>{{ transaction.date }}</td>
+              <td>{{ transaction.sourceAccount }}</td>
+              <td>{{ transaction.destinationAccount }}</td>
+              <td>{{ getTransactionTypeName(transaction.type) }}</td>
+              <td>{{ getTransactionStatusName(transaction.status) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-template>
+    </ng-template>
+  </div>

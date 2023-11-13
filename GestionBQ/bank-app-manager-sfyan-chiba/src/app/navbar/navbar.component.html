@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <ul class="navbar-nav">
+    <li class="nav-item" *ngIf="isLoggedIn">
+      <a class="nav-link" routerLink="/customer-list">Customers</a>
+      <a class="nav-link" routerLink="/account-list">Accounts</a>
+      <a class="nav-link" routerLink="/transaction-list">List Transactions</a>
+      <a class="nav-link" routerLink="/transaction-create">Create Transaction</a>
+      <button class="nav-button" (click)="logout()">Logout</button>
+    </li>
+    <li class="nav-item" *ngIf="!isLoggedIn">
+      <a class="nav-link" routerLink="/login">Login</a>
+    </li>
+  </ul>
+</nav>

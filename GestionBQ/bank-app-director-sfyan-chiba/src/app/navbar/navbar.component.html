@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/agency-details/64654f4e373a17165adafa84">Agency</a>
+        <a class="nav-link" routerLink="/customer-list/64654f4e373a17165adafa84">Customers List</a>
+        <a class="nav-link" routerLink="/account-list/64654f4e373a17165adafa84">Accounts List</a>
+        <a class="nav-link" routerLink="/transaction-list/64654f4e373a17165adafa84">Transactions List</a>
+        <button class="nav-button" (click)="logout()">Logout</button>
+      </li>
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+    </ul>
+  </nav>
+  

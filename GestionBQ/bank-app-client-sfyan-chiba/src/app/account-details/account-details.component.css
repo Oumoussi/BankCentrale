@@ -1,0 +1,44 @@
+.account-details {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  .transaction-list {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead th {
+    text-align: left;
+    font-weight: bold;
+    padding: 8px;
+  }
+  
+  tbody td {
+    padding: 8px;
+  }
+  
+  button {
+    padding: 4px 8px;
+  }
+  

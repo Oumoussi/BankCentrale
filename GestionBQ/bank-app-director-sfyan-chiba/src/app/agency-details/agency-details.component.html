@@ -1,0 +1,18 @@
+<div class="account-list">
+  <ng-container *ngIf="!isLoggedIn; else loggedIn">
+    <h2>Please log in to view your accounts!</h2>
+    <button routerLink="/login">Login</button>
+  </ng-container>
+  <ng-template #loggedIn>
+    <table>
+      <thead>
+        <tr>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <td>{{ agency?.city }}</td>
+      </tbody>
+    </table>
+  </ng-template>
+</div>

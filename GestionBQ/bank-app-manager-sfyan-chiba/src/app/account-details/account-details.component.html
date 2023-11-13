@@ -1,0 +1,40 @@
+<ng-container *ngIf="!isLoggedIn; else loggedIn">
+  <p>You must be logged in to view this page.</p>
+  <a routerLink="/login">Login</a>
+</ng-container>
+<ng-template #loggedIn>
+
+  <div class="account-details">
+    <h2>Account Details</h2>
+    <p>Account RIB: {{ account.id }}</p>
+    <p>Balance: {{ account.balance | number: '1.2-2' }}</p>
+    
+  </div>
+  
+  <h2>Transactions:</h2>
+  <div class="transaction-list">
+    <table>
+      <thead>
+        <tr>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Source RIB</th>
+          <th>Destination RIB</th>
+          <th>Type</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.amount }}</td>
+          <td>{{ transaction.date | date }}</td>
+          <td>{{ transaction.sourceAccount }}</td>
+          <td>{{ transaction.destinationAccount }}</td>
+          <td>{{ getTransactionTypeName(transaction.type) }}</td>
+          <td>{{ getTransactionStatusName(transaction.status) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</ng-template>

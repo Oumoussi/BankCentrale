@@ -1,0 +1,27 @@
+<div class="account-list">
+    <ng-container *ngIf="!isLoggedIn; else loggedIn">
+      <h2>Please log in to access this page !</h2>
+      <button routerLink="/login">Login</button>
+    </ng-container>
+    <ng-template #loggedIn>
+      <ng-container *ngIf="accounts.length === 0; else accountList">
+        <h2>no accounts found !</h2>
+      </ng-container>
+      <ng-template #accountList>
+        <table>
+          <thead>
+            <tr>
+              <th>Account RIB</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let account of accounts">
+              <td>{{ account.id }}</td>
+              <td>{{ account.balance }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-template>
+    </ng-template>
+  </div>
