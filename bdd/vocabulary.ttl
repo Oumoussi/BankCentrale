@@ -1,0 +1,76 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#Compte
+ex:Accounts rdf:type rdfs:Class ;
+    rdfs:label "Accounts" .
+
+ex:Id rdf:type rdf:Property ;
+    rdfs:label "Identifiant" ;
+    rdfs:domain ex:Accounts ;
+    rdfs:range xsd:int .
+    
+ex:Balance rdf:type rdf:Property ;
+    rdfs:label "Balance" ;
+    rdfs:domain ex:Accounts ;
+    rdfs:range xsd:float .
+    
+
+ex:Customer rdf:type rdf:Property ;
+    rdfs:label "Client" ;
+    rdfs:domain ex:Accounts ;
+    rdfs:range xsd:string .
+
+ex:Agency rdf:type rdf:Property ;
+    rdfs:label "Agence" ;
+    rdfs:domain ex:Accounts ;
+    rdfs:range xsd:int .
+
+#Agence
+ex:Agencies rdf:type rdfs:Class ;
+    rdfs:label "Agences" .
+
+ex:Id rdf:type rdf:Property ;
+    rdfs:label "Identifiant" ;
+    rdfs:domain ex:Agencies ;
+    rdfs:range xsd:int .
+    
+ex:City rdf:type rdf:Property ;
+    rdfs:label "Ville" ;
+    rdfs:domain ex:Agencies ;
+    rdfs:range xsd:string .
+
+#Client
+ex:Customer rdf:type rdfs:Class ;
+    rdfs:label "Client" .
+
+ex:Id rdf:type rdf:Property ;
+    rdfs:label "Identifiant" ;
+    rdfs:domain ex:Customer ;
+    rdfs:range xsd:int .
+    
+ex:Firstname rdf:type rdf:Property ;
+    rdfs:label "Prenom" ;
+    rdfs:domain ex:Customer ;
+    rdfs:range xsd:string .
+    
+ex:Lastname rdf:type rdf:Property ;
+    rdfs:label "Nom" ;
+    rdfs:domain ex:Customer ;
+    rdfs:range xsd:string .
+    
+ex:PasswordHash rdf:type rdf:Property ;
+    rdfs:label "Mot de passe" ;
+    rdfs:domain ex:Customer ;
+    rdfs:range xsd:string .
+    
+ex:Email rdf:type rdf:Property ;
+    rdfs:label "Adresse Email" ;
+    rdfs:domain ex:Agencies ;
+    rdfs:range xsd:string .
+    
+ex:PhoneNumber rdf:type rdf:Property ;
+    rdfs:label "Telephone" ;
+    rdfs:domain ex:Customer ;
+    rdfs:range xsd:string .
